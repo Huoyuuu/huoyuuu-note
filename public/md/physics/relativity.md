@@ -11,13 +11,13 @@ $$ E = mc^2 $$
 其中：
 * $E$ 是能量
 * $m$ 是质量
-* $c$ 是光速 ($ \approx 3 \times 10^8 m/s $)
+* $c$ 是光速 ($ \approx 3 \times 10^8 \, \text{m/s} $)
 
 ## 洛伦兹变换
 
 在两个惯性参考系之间变换坐标：
 
-$$ t' = \gamma (t - \frac{vx}{c^2}) $$
+$$ t' = \gamma \left( t - \frac{vx}{c^2} \right) $$
 $$ x' = \gamma (x - vt) $$
 
 其中洛伦兹因子 $\gamma$ 定义为：
