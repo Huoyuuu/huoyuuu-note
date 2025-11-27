@@ -37,10 +37,15 @@ export default function App() {
     }
   };
 
-  // Resolve markdown file URL so it works with the Vite base path (e.g. GitHub Pages)
   const buildFileUrl = (rawPath: string) => {
-    const normalizedPath = rawPath.startsWith('/') ? rawPath.slice(1) : rawPath;
-    return new URL(normalizedPath, import.meta.env.BASE_URL).toString();
+      const normalizedPath = rawPath.startsWith("/")
+      ? rawPath.slice(1)
+      : rawPath;
+      const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+      ? import.meta.env.BASE_URL
+      : `${import.meta.env.BASE_URL}/`;
+
+      return `${baseUrl}${normalizedPath}`;
   };
 
   // Effect to fetch file content when selectedFile changes
